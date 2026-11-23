@@ -17,6 +17,11 @@ Arcade Vault: plataforma para jugar online y competir por la mayor cantidad de p
 
 `AGENTS.md` advierte que esta versión (Next 16.4, React 19.3) tiene cambios incompatibles con lo que conoces. Antes de escribir código, lee la guía relevante en `node_modules/next/dist/docs/` (`01-app`, `02-pages`, `03-architecture`, `04-community`) y respeta los avisos de deprecación.
 
+## Skills
+
+Usa siempre /frontend-design para diseñar la interfaz de usuario
+
+
 ## Arquitectura / configuración no obvia
 
 - App Router en `app/` (`layout.tsx`, `page.tsx`, `globals.css`). Alias `@/*` apunta a la raíz del repo.
