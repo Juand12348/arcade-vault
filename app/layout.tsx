@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, JetBrains_Mono, Courier_Prime } from "next/font/google";
+import { SessionProvider } from "@/lib/session";
 import "./globals.css";
 
 // Mismas familias y pesos que el <link> de Google Fonts en references/templates/Arcade Vault.html
@@ -36,7 +37,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="av-bg" />
         <div className="av-noise" />
         {/* #root: el tema (styles.css) lo usa como contenedor flex de la app */}
-        <div id="root">{children}</div>
+        <div id="root">
+          <SessionProvider>{children}</SessionProvider>
+        </div>
       </body>
     </html>
   );
