@@ -1,6 +1,6 @@
 # SPEC 01 — Pantallas visuales del MVP de Arcade Vault
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** Ninguna
 > **Fecha:** 2026-11-25
 > **Objetivo:** Portar a Next.js (App Router) las cinco pantallas de `references/templates/` (biblioteca, detalle, reproductor, autenticación y salón de la fama) con datos simulados y sin lógica de juego real.
@@ -96,29 +96,29 @@ Antes de escribir código, leer en `node_modules/next/dist/docs/` lo relativo a 
 
 ## Criterios de aceptación
 
-- [ ] `npm run lint` termina sin errores.
-- [ ] `npm run build` termina sin errores y genera las rutas `/`, `/auth`, `/salon`, `/juegos/[id]` y `/juegos/[id]/jugar`.
-- [ ] La consola del navegador no muestra errores ni avisos de hidratación en ninguna de las cinco pantallas.
-- [ ] `/` muestra 8 tarjetas; escribir "caí" deja solo CAÍDA; elegir el chip SHOOTER deja INVASORES y ROCAS.
-- [ ] Una búsqueda sin coincidencias muestra "NO HAY RESULTADOS".
-- [ ] Hacer clic en una tarjeta o en su botón JUGAR navega a `/juegos/[id]`.
-- [ ] `/juegos/caida` muestra título, descripción, 4 etiquetas, 3 estadísticas y 10 filas de puntuaciones, con las 3 primeras destacadas.
-- [ ] `/juegos/no-existe` devuelve la página 404.
-- [ ] JUGAR AHORA lleva al reproductor; el HUD muestra puntuación creciente, 3 vidas y nivel 01.
-- [ ] PAUSA detiene la puntuación y muestra "EN PAUSA"; REANUDAR la reactiva.
-- [ ] FIN abre el modal "FIN DEL JUEGO" con la puntuación final; GUARDAR PUNTUACIÓN muestra "PUNTUACIÓN GUARDADA_" y agrega una entrada a `localStorage["av_scores"]`.
-- [ ] JUGAR DE NUEVO reinicia puntuación, vidas, nivel y cierra el modal.
-- [ ] En `/auth`, la pestaña CREAR CUENTA muestra el campo de correo; la pestaña INICIAR SESIÓN lo oculta.
-- [ ] Enviar el formulario con usuario "kai" guarda `{"name":"KAI"}` en `localStorage["av_user"]`, redirige a `/` y la barra muestra "KAI ▾".
-- [ ] Con el formulario vacío, el nombre guardado es `PLAYER1`.
-- [ ] JUGAR COMO INVITADO redirige a `/` y la barra muestra "Iniciar Sesión".
-- [ ] Hacer clic en "KAI ▾" cierra la sesión y borra `av_user`.
-- [ ] Recargar la página con sesión iniciada mantiene el nombre en la barra.
-- [ ] `/salon` muestra una pestaña por juego (8), el podio con 01 al centro y 12 filas; cambiar de pestaña cambia los datos.
-- [ ] En `/salon`, la fila "TU MEJOR MARCA EN <JUEGO>" aparece solo con sesión iniciada.
-- [ ] El enlace activo de la barra es el correcto en `/`, `/juegos/*` y `/salon`.
-- [ ] A 375 px de ancho aparece el botón `≡`, y abre y cierra el panel móvil con backdrop.
-- [ ] Los datos de ranking son idénticos entre recargas (generador determinista).
+- [x] `npm run lint` termina sin errores.
+- [x] `npm run build` termina sin errores y genera las rutas `/`, `/auth`, `/salon`, `/juegos/[id]` y `/juegos/[id]/jugar`.
+- [x] La consola del navegador no muestra errores ni avisos de hidratación en ninguna de las cinco pantallas.
+- [x] `/` muestra 8 tarjetas; escribir "caí" deja solo CAÍDA; elegir el chip SHOOTER deja INVASORES y ROCAS.
+- [x] Una búsqueda sin coincidencias muestra "NO HAY RESULTADOS".
+- [x] Hacer clic en una tarjeta o en su botón JUGAR navega a `/juegos/[id]`.
+- [x] `/juegos/caida` muestra título, descripción, 4 etiquetas, 3 estadísticas y 10 filas de puntuaciones, con las 3 primeras destacadas.
+- [x] `/juegos/no-existe` devuelve la página 404.
+- [x] JUGAR AHORA lleva al reproductor; el HUD muestra puntuación creciente, 3 vidas y nivel 01.
+- [x] PAUSA detiene la puntuación y muestra "EN PAUSA"; REANUDAR la reactiva.
+- [x] FIN abre el modal "FIN DEL JUEGO" con la puntuación final; GUARDAR PUNTUACIÓN muestra "PUNTUACIÓN GUARDADA_" y agrega una entrada a `localStorage["av_scores"]`.
+- [x] JUGAR DE NUEVO reinicia puntuación, vidas, nivel y cierra el modal.
+- [x] En `/auth`, la pestaña CREAR CUENTA muestra el campo de correo; la pestaña INICIAR SESIÓN lo oculta.
+- [x] Enviar el formulario con usuario "kai" guarda `{"name":"KAI"}` en `localStorage["av_user"]`, redirige a `/` y la barra muestra "KAI ▾".
+- [x] Con el formulario vacío, el nombre guardado es `PLAYER1`.
+- [x] JUGAR COMO INVITADO redirige a `/` y la barra muestra "Iniciar Sesión".
+- [x] Hacer clic en "KAI ▾" cierra la sesión y borra `av_user`.
+- [x] Recargar la página con sesión iniciada mantiene el nombre en la barra.
+- [x] `/salon` muestra una pestaña por juego (8), el podio con 01 al centro y 12 filas; cambiar de pestaña cambia los datos.
+- [x] En `/salon`, la fila "TU MEJOR MARCA EN <JUEGO>" aparece solo con sesión iniciada.
+- [x] El enlace activo de la barra es el correcto en `/`, `/juegos/*` y `/salon`.
+- [x] A 375 px de ancho aparece el botón `≡`, y abre y cierra el panel móvil con backdrop.
+- [x] Los datos de ranking son idénticos entre recargas (generador determinista).
 
 ## Decisiones tomadas y descartadas
 
