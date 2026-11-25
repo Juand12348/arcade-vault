@@ -1,6 +1,6 @@
 # SPEC 02 — Página de inicio (Home) y biblioteca en `/juegos`
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-11-25
 > **Objetivo:** Crear la página de inicio de `references/templates/home-about/home.jsx` en `/` y mover la biblioteca de juegos a `/juegos`.
@@ -86,24 +86,24 @@ Antes de escribir código, leer en `node_modules/next/dist/docs/` lo relativo a 
 
 ## Criterios de aceptación
 
-- [ ] `npm run lint` termina sin errores.
-- [ ] `npm run build` termina sin errores y genera `/`, `/juegos`, `/auth`, `/salon`, `/juegos/[id]` y `/juegos/[id]/jugar`.
-- [ ] La consola del navegador no muestra errores ni avisos de hidratación en `/` y `/juegos`.
-- [ ] `/juegos` muestra la biblioteca de SPEC 01 sin cambios: 8 tarjetas, búsqueda "caí" deja solo CAÍDA, chip SHOOTER deja INVASORES y ROCAS, y "NO HAY RESULTADOS" sin coincidencias.
-- [ ] `/` ya no muestra la biblioteca completa; muestra el hero con el título "EL ARCADE / CLÁSICO ESTÁ / DE VUELTA".
-- [ ] `/` contiene las secciones `// 01`, `// 02`, `// 03` y `// 04`, la franja de 3 estadísticas y el CTA final "¿LISTO PARA JUGAR?".
-- [ ] La sección `// 01` muestra 4 tarjetas con icono; `// 02` muestra 6 mini-tarjetas; el ticker tiene 7 filas y el top de jugadores 5 filas.
-- [ ] Hacer clic en una mini-tarjeta navega a `/juegos/[id]` del juego elegido.
-- [ ] EXPLORAR JUEGOS, VER TODOS LOS JUEGOS e INSERTAR MONEDA navegan a `/juegos`.
-- [ ] CREAR CUENTA y EMPEZAR GRATIS navegan a `/auth`; VER SALÓN navega a `/salon`.
-- [ ] Las secciones con `reveal` empiezan ocultas y reciben la clase `in` al entrar en el viewport.
-- [ ] Con `prefers-reduced-motion: reduce` las secciones se ven sin animación de aparición.
-- [ ] La barra muestra Inicio, Biblioteca y Salón de la Fama (sin "Acerca de"); el activo es Inicio en `/`, Biblioteca en `/juegos` y `/juegos/*`, y Salón en `/salon`.
-- [ ] El panel móvil (375 px) muestra los mismos enlaces con el estado activo correcto.
-- [ ] VOLVER AL VAULT (detalle y modal del reproductor) y VOLVER A LA BIBLIOTECA (salón) llevan a `/juegos`.
-- [ ] El logo y el envío del formulario de `/auth` llevan a `/`; la barra muestra "KAI ▾" tras iniciar sesión como "kai".
-- [ ] A 375 px de ancho `/` no tiene scroll horizontal.
-- [ ] `grep` de `href="/"` en `components/` y `app/` solo encuentra el logo de la nav y los usos intencionales de "Inicio".
+- [x] `npm run lint` termina sin errores.
+- [x] `npm run build` termina sin errores y genera `/`, `/juegos`, `/auth`, `/salon`, `/juegos/[id]` y `/juegos/[id]/jugar`.
+- [x] La consola del navegador no muestra errores ni avisos de hidratación en `/` y `/juegos`.
+- [x] `/juegos` muestra la biblioteca de SPEC 01 sin cambios: 8 tarjetas, búsqueda "caí" deja solo CAÍDA, chip SHOOTER deja INVASORES y ROCAS, y "NO HAY RESULTADOS" sin coincidencias.
+- [x] `/` ya no muestra la biblioteca completa; muestra el hero con el título "EL ARCADE / CLÁSICO ESTÁ / DE VUELTA".
+- [x] `/` contiene las secciones `// 01`, `// 02`, `// 03` y `// 04`, la franja de 3 estadísticas y el CTA final "¿LISTO PARA JUGAR?".
+- [x] La sección `// 01` muestra 4 tarjetas con icono; `// 02` muestra 6 mini-tarjetas; el ticker tiene 7 filas y el top de jugadores 5 filas.
+- [x] Hacer clic en una mini-tarjeta navega a `/juegos/[id]` del juego elegido.
+- [x] EXPLORAR JUEGOS, VER TODOS LOS JUEGOS e INSERTAR MONEDA navegan a `/juegos`.
+- [x] CREAR CUENTA y EMPEZAR GRATIS navegan a `/auth`; VER SALÓN navega a `/salon`.
+- [x] Las secciones con `reveal` empiezan ocultas y reciben la clase `in` al entrar en el viewport.
+- [x] Con `prefers-reduced-motion: reduce` las secciones se ven sin animación de aparición.
+- [x] La barra muestra Inicio, Biblioteca y Salón de la Fama (sin "Acerca de"); el activo es Inicio en `/`, Biblioteca en `/juegos` y `/juegos/*`, y Salón en `/salon`.
+- [x] El panel móvil (375 px) muestra los mismos enlaces con el estado activo correcto.
+- [x] VOLVER AL VAULT (detalle y modal del reproductor) y VOLVER A LA BIBLIOTECA (salón) llevan a `/juegos`.
+- [x] El logo y el envío del formulario de `/auth` llevan a `/`; la barra muestra "KAI ▾" tras iniciar sesión como "kai".
+- [x] A 375 px de ancho `/` no tiene scroll horizontal.
+- [x] `grep` de `href="/"` en `components/` y `app/` solo encuentra el logo de la nav y los usos intencionales de "Inicio".
 
 ## Decisiones tomadas y descartadas
 
