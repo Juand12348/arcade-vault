@@ -1278,4 +1278,5 @@ a { color: inherit; text-decoration: none; }
   .home-silos .silo, .hero-scroll .arrow { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .tick-row { opacity: 1; animation: none; }
+  .div-pixels span, .contact-form.shake { animation: none; }
 }
