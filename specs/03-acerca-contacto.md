@@ -1,6 +1,6 @@
 # SPEC 03 — Página "Acerca de" y formulario de contacto con Resend
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 01, SPEC 02
 > **Fecha:** 2026-11-26
 > **Objetivo:** Crear la página `/acerca` de `references/templates/home-about/about.jsx` y hacer que su formulario de contacto envíe un correo real al equipo mediante Resend.
@@ -93,22 +93,22 @@ Antes de escribir código, leer en `node_modules/next/dist/docs/` lo relativo a 
 
 ## Criterios de aceptación
 
-- [ ] `npm run lint` termina sin errores.
-- [ ] `npm run build` termina sin errores y genera `/acerca` junto con las rutas existentes.
-- [ ] La consola del navegador no muestra errores ni avisos de hidratación en `/acerca`.
-- [ ] `/acerca` muestra el título "ACERCA DE ARCADE VAULT", 3 destacados con icono, el divisor y el título "CONTÁCTANOS".
-- [ ] La barra y el panel móvil muestran "Acerca de"; es el enlace activo en `/acerca` y lleva a esa ruta.
-- [ ] Enviar el formulario con algún campo vacío no envía correo, aplica la animación `shake` y conserva lo escrito.
-- [ ] Un correo con formato inválido o un campo por encima de su longitud máxima se rechaza en el servidor.
-- [ ] Con datos válidos y claves correctas, llega un correo a `CONTACT_TO_EMAIL` con asunto `[Arcade Vault] Mensaje de <nombre>`, cuerpo con nombre, correo y mensaje, y `reply-to` igual al correo del visitante.
-- [ ] Tras un envío correcto aparece el panel terminal con "MENSAJE RECIBIDO. TE RESPONDEREMOS PRONTO. GRACIAS, <NOMBRE EN MAYÚSCULAS>.".
-- [ ] ENVIAR OTRO MENSAJE vuelve al formulario vacío.
-- [ ] Mientras se envía, el botón queda deshabilitado y no admite un segundo envío.
-- [ ] Sin `RESEND_API_KEY` (o con una clave inválida) aparece el error `> ERROR AL ENVIAR. INTÉNTALO DE NUEVO.`, no aparece el panel de éxito y se conserva lo escrito.
-- [ ] Con el campo honeypot relleno no se envía ningún correo y el usuario ve el estado de éxito.
-- [ ] `RESEND_API_KEY` no aparece en el JS enviado al navegador ni en el código fuente del repositorio (`grep` de `re_` en `app/`, `components/` y `lib/` sin resultados).
-- [ ] Con `prefers-reduced-motion: reduce` el divisor y el `shake` no se animan.
-- [ ] A 375 px de ancho `/acerca` no tiene scroll horizontal.
+- [x] `npm run lint` termina sin errores.
+- [x] `npm run build` termina sin errores y genera `/acerca` junto con las rutas existentes.
+- [x] La consola del navegador no muestra errores ni avisos de hidratación en `/acerca`.
+- [x] `/acerca` muestra el título "ACERCA DE ARCADE VAULT", 3 destacados con icono, el divisor y el título "CONTÁCTANOS".
+- [x] La barra y el panel móvil muestran "Acerca de"; es el enlace activo en `/acerca` y lleva a esa ruta.
+- [x] Enviar el formulario con algún campo vacío no envía correo, aplica la animación `shake` y conserva lo escrito.
+- [x] Un correo con formato inválido o un campo por encima de su longitud máxima se rechaza en el servidor.
+- [x] Con datos válidos y claves correctas, llega un correo a `CONTACT_TO_EMAIL` con asunto `[Arcade Vault] Mensaje de <nombre>`, cuerpo con nombre, correo y mensaje, y `reply-to` igual al correo del visitante.
+- [x] Tras un envío correcto aparece el panel terminal con "MENSAJE RECIBIDO. TE RESPONDEREMOS PRONTO. GRACIAS, <NOMBRE EN MAYÚSCULAS>.".
+- [x] ENVIAR OTRO MENSAJE vuelve al formulario vacío.
+- [x] Mientras se envía, el botón queda deshabilitado y no admite un segundo envío.
+- [x] Sin `RESEND_API_KEY` (o con una clave inválida) aparece el error `> ERROR AL ENVIAR. INTÉNTALO DE NUEVO.`, no aparece el panel de éxito y se conserva lo escrito.
+- [x] Con el campo honeypot relleno no se envía ningún correo y el usuario ve el estado de éxito.
+- [x] `RESEND_API_KEY` no aparece en el JS enviado al navegador ni en el código fuente del repositorio (`grep` de `re_` en `app/`, `components/` y `lib/` sin resultados).
+- [x] Con `prefers-reduced-motion: reduce` el divisor y el `shake` no se animan.
+- [x] A 375 px de ancho `/acerca` no tiene scroll horizontal.
 
 ## Decisiones tomadas y descartadas
 
